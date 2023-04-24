@@ -1,0 +1,96 @@
+/* __debugGrid__ */
+.debugGrid
+    height: 100vh
+    position: fixed
+    width: 100%
+    
+    .wrapper
+        height: inherit
+        
+    .parentFlex
+        height: inherit
+        +row-flex()
+            
+    .childFlex
+        +col()
+        +size(1)
+        +size-sm(1)
+        +size-xs(1)
+        height: inherit
+        outline:  1px solid #ff0
+        background: rgba(0, 0, 0, 0.4)
+    @include debugBtn()
+/* __debugGrid__ */
+.header
+    .parent
+        +row-flex()
+        width: 1000px
+        .child
+            /*child*/
+            +col()
+            +size(12)
+            // +size-sm(6)
+            background-color: red
+            font-size: 40px
+            width: 320px
+            margin: 1px 2px 1px
+            +xs-block
+                font-size: 50px
+                width: 567px
+                margin: 2px 3px 2px
+           
+            +sm-block
+                font-size: 60px
+                width: 768px
+                margin: 3px 4px 3px
+/*introducing-Monte-GT*/
+.introducing-Monte-GT
+    background: red
+    font-family: $SFUIDisplay-Regular
+
+.introducing-title,
+h1 
+	font-size: 54px 
+	margin-top: 54px 
+.introducing-description
+	display: flex 
+	align-items: center 
+	width: 33% 
+	height: 28px 
+	font-size: 16px 
+	margin-top: 12px 
+.introducing-rating 
+	display: flex 
+	width: 143px 
+	margin-top: 12px 
+	align-items: center 
+.rating__stars 
+	height: 20px 
+.rating__numbers 
+	margin-left: 10px 
+.introducing-statistics 
+	display: flex 
+	align-items: center 
+	height: 28px 
+	color: #FF472E 
+	margin-top: 11px 
+.introducing-device 
+	width: 100% 
+	position: absolute 
+	display: flex 
+	flex-direction: row-reverse 
+.introducing-device__icon 
+	width: 50% 
+.introducing-characteristic 
+	position: relative 
+.introducing-characteristic__items 
+	display: flex 
+	flex-wrap: wrap 
+	justify-content: space-around 
+	width: 71% 
+.introducing-characteristic__item 
+	display: flex 
+	flex-wrap: wrap 
+	justify-content: center 
+	width: 16% 
+	margin-top: 31px
