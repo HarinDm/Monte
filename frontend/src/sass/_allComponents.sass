@@ -1,3 +1,37 @@
+/*banner*/
+.banner
+    padding: 100px 0
+    border: 1px solid
+    &-inner
+        +row-flex
+    &__text
+        +col 
+        +size(12)
+        +shift-right(-6)
+
+        &-desctiption
+    &__advantages
+        +row-flex
+        +size(12)
+        padding: 10px 1px
+    &-advantages
+        
+        &-item
+            +col
+            +size(2)
+            +size-xs(6)
+
+    &__img
+        +col
+        +size(6)
+        +size-xs(12)
+
+.stars
+    &__img
+    &__count
+
+.page-title
+.page-text
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -21,6 +55,117 @@
         background: rgba(0, 0, 0, 0.4)
     @include debugBtn()
 /* __debugGrid__ */
+/*everything*/
+.everything
+    &-block-title
+        display: flex
+
+    &-title
+        +size(7)
+        margin: 100px -60% 0 0
+
+    &-mercedes__background
+        +size(9)
+        +shift-right(-1.3)
+        margin-top: 60px
+        margin-left: auto
+
+    &-description
+        display: flex 
+        flex-wrap: wrap 
+        justify-content: space-around 
+        margin-top: 60px 
+        
+    &-description__item 
+        +size(3)
+
+.description-item__title 
+	font-size: 28px 
+	font-weight: 600 
+	margin-top: 67px 
+	letter-spacing: 1px 
+
+.description-item__text 
+	line-height: 28px
+/*introducing-Monte-GT*/
+.introducing-Monte-GT
+    font-family: SFUIDisplay-Regular
+
+.introducing-title, h1 
+	font-size: 54px 
+	margin-top: 54px 
+.introducing-description
+	display: flex 
+	align-items: center 
+	width: 33%
+	height: 28px 
+	font-size: 16px 
+	margin-top: 12px 
+.introducing-rating 
+	display: flex 
+	width: 143px 
+	margin-top: 12px
+	align-items: center 
+.rating__stars 
+	height: 20px 
+.rating__numbers 
+	margin-left: 10px 
+.introducing
+    &-statistics 
+        display: flex 
+        align-items: center 
+        height: 28px 
+        color: #FF472E 
+        margin-top: 11px 
+.introducing-device 
+	+size(2)
+	position: absolute 
+	display: flex 
+	flex-direction: row-reverse 
+.introducing-device__icon   
+    // +size(7.15)
+    margin: 0 0 -488px 543px
+.introducing-characteristic__items
+	display: flex
+	+size(12)
+.introducing-characteristic
+	&__item 
+		display: flex
+		align-items: center
+		margin-top: 31px
+		+size(2)
+.characteristic__icon 
+	// width: 100% 
+    
+.characteristic__description 
+	display: flex 
+	align-items: center 
+	height: 48px 
+	text-align: center 
+	margin-top: 9px 
+.introducing-button 
+	width: 359px 
+	height: 52px 
+	color: white 
+	border: 0px 
+	border-radius: 42px 
+	background: linear-gradient(270deg, #796FFE -24.15%, #FF36C7 178.98%) 
+	margin-top: 52px 
+.introducing-order-now 
+    display: flex 
+    justify-content: center 
+    align-items: center 
+    width: 359px 
+    height: 28px 
+    text-align: center 
+    margin-top: 4px 
+.introducing-background 
+	width: 100% 
+	height: 75px 
+	background: linear-gradient(180deg,rgba(233, 233, 233, 0.5) 0%,rgba(217, 217, 217, 0) 100%) 
+	margin-top: 60px 
+
+
 .header
     .parent
         +row-flex()
@@ -43,54 +188,251 @@
                 font-size: 60px
                 width: 768px
                 margin: 3px 4px 3px
-/*introducing-Monte-GT*/
-.introducing-Monte-GT
-    background: red
-    font-family: $SFUIDisplay-Regular
+/*news-banner*/
+     
+.news
+    &
+        display: flex 
+        flex-wrap: wrap 
+        justify-content: center 
 
-.introducing-title,
-h1 
-	font-size: 54px 
-	margin-top: 54px 
-.introducing-description
-	display: flex 
-	align-items: center 
-	width: 33% 
-	height: 28px 
-	font-size: 16px 
-	margin-top: 12px 
-.introducing-rating 
-	display: flex 
-	width: 143px 
-	margin-top: 12px 
-	align-items: center 
-.rating__stars 
-	height: 20px 
-.rating__numbers 
-	margin-left: 10px 
-.introducing-statistics 
-	display: flex 
-	align-items: center 
-	height: 28px 
-	color: #FF472E 
-	margin-top: 11px 
-.introducing-device 
+    &-title 
+        width: 100% 
+        font-size: 32px 
+        text-align: center 
+        font-weight: 600 
+        letter-spacing: 2px
+        margin-top: 100px 
+        +sm-block
+            margin-top: 61px 
+        +xs-block
+            margin-top: 50px 
+            font-size: 18px
+            letter-spacing: 1px
+
+    &-articles 
+        display: flex 
+        flex-wrap: wrap 
+        justify-content: space-around 
+
+    &-articles__item 
+        max-width: calc(33.33333% - 30px) 
+        margin-top: 48px 
+        +sm-block
+            max-width: calc(50% - 10px) 
+        +xs-block
+            margin-top: 25px
+            max-width: calc(50% - 10px) 
+    
+    &__link 
+        display: flex 
+        align-items: center 
+        width: fit-content 
+        height: 24px 
+        font-size: 20px 
+        color: #FF4582
+        margin-top: 12px
+        +sm-block
+            font-size: 13px 
+        +xs-block
+            font-size: 10px 
+
+.article__date
+    display: flex 
+    align-items: center 
+    width: 164px 
+    height: 28px 
+    font-size: 13px 
+    opacity: 30%
+    margin-top: 38px
+    +sm-block
+        margin-top: 29px
+    +xs-block
+        margin-top: 26px
+
+.article__title 
+    display: flex 
+    align-items: center 
+    width: 100% 
+    height: 44px 
+    font-size: 20px 
+    font-weight: 600 
+    letter-spacing: 0.5px
+    margin-top: 13px
+    +sm-block
+        margin-top: 9px
+    +xs-block
+        font-size: 13px
+
+.article__text 
+    width: 100% 
+    font-size: 16px 
+    margin-top: 5px
+    line-height: 28px 
+    +sm-block
+        font-size: 13px
+        line-height: 26px
+    +xs-block
+        height: 74px
+        overflow: hidden
+
+.learn-more__icon 
+    width: 9px 
+    height: 16px 
+    margin: 0 20px 0
+    +sm-block
+        width: 7px 
+        height: 10px 
+    +xs-block
+        width: 4px
+        height: 8px 
+
+.article__preview 
 	width: 100% 
-	position: absolute 
+	border-radius: 20px
+
+
+
+/*news-single*/
+.news
+    &-single-block
+        display: flex
+        flex-wrap: wrap
+
+    &-single__images
+        max-width: calc(33.3333% - 32px)
+        margin-right: 32px
+
+    &-single__text
+        
+
+    &-single
+    &-title
+            text-align: start
+            margin-top: 0px
+
+    &__link .learn-more__icon
+        margin-left: 0
+
+    .article__date
+        margin: 0 0 30px
+
+    
+/*unleashed*/
+.wrapper
+    +sm-block
+        overflow: hidden
+
+.unleashed
+    &
+        background-color: #F7F8FA 
+        margin-top: 114px
+
+    &-block
+        display: flex
+        +xs-block
+            display: block
+
+    &__text
+        +size(6.15)
+        +sm-block
+            width: 57%
+        +xs-block
+            width: 100%
+
+    &-description
+        display: flex
+        color: #222222 
+        opacity: 0.3 
+        padding-top: 95px
+        font-size: 13px
+        +sm-block
+            padding-top: 50px
+        +xs-block
+            display: block
+            padding-top: 27px
+
+    &-description__item
+        margin-right: 5px
+        +xs-block
+            margin-bottom: 11px
+    
+    &__title
+        letter-spacing: 0.8px
+        margin-top: 35px
+        +sm-block
+            font-size: 32px
+        +xs-block
+            font-size: 30px
+            margin-top: 25px
+
+    &__data
+        display: flex 
+        margin: 78px 0 0 68px 
+        +sm-block
+            margin: 30px 0 0 68px
+        +xs-block
+            margin: 16px 0 0 68px
+
+    &__power
+        +size(9)
+        +sm-block
+            width: 85%
+        +xs-block
+            width: 91%
+
+    &__torque
+        +size(10.5)
+        +sm-block
+            width: 100%
+
+    &__find 
+        display: flex 
+        align-items: center 
+        justify-content: center 
+        color: #FF472E 
+        height: 52px 
+        border: 1px solid #FF472E 
+        border-radius: 42px 
+        margin: 77px 0 80px 0 
+        +size(8.4)
+        +sm-block
+            width: 69%
+            margin: 51px 0 64px 0
+        +xs-block
+            margin: 40px 0 0px 0 
+            width: 100%
+
+    &__image 
+        +size(8.1)
+        +shift-right(-2.6)
+        margin-top: 134px
+        +sm-block
+            margin-top: 98px
+            +size(11.6)
+            +shift-right(-6.1)
+        +xs-block
+            width: 133%
+            margin: 30px 0 30px
+
+    &__image__item 
+        width: 100%
+
+.data__item 
+    padding-top: 0px
+    margin-left: 60px 
+    
+
+.power__table 
 	display: flex 
-	flex-direction: row-reverse 
-.introducing-device__icon 
-	width: 50% 
-.introducing-characteristic 
-	position: relative 
-.introducing-characteristic__items 
-	display: flex 
-	flex-wrap: wrap 
-	justify-content: space-around 
-	width: 71% 
-.introducing-characteristic__item 
-	display: flex 
-	flex-wrap: wrap 
-	justify-content: center 
-	width: 16% 
-	margin-top: 31px
+	align-items: center
+	height: 56px 
+	border-radius: 37px 
+	background: linear-gradient(270deg, #FFCD4D 3.06%, #FF3A3A 55.23%, #5B34EE 106.33%) 
+	color: white 
+	margin-top: 10px 
+
+.power__item 
+	
+        margin-left: 28px
+        width: 71px

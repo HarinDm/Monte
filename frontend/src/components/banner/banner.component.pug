@@ -1,0 +1,49 @@
+//-banner
+mixin item(obj)
+    .banner-advantages-item
+        .banner-advantages-item__img.icon
+            img(src=obj.img, alt="img")
+        .banner-advantages-item__text #{obj.description}
+
+mixin items(array)
+    each obj in array
+        +item(obj)
+    
+
+section.banner
+    .wrapper
+        .banner-inner
+            .banner__text
+                .banner__text-desctiption
+                    h1.page-title.page-title-h1 Introducing Monte GT
+                    p.page-text Customise your tunning with IOS/Android app
+                    .stars
+                        .stars__img
+                            img(src="assets/images/png/stars.png", alt="stars")
+                            .stars__count 4.7
+                        .stars__text 
+                            .page-text 98% of the customers give this item 5 stars.
+
+                .banner__advantages
+                    +items([
+                        {
+                            img: 'assets/images/png/power.png',
+                            description: '10-20% more power and torque*'
+                        },
+                        {
+                            img: 'assets/images/png/fuel.png',
+                            description: 'OBDII plug &amp; play installlation'
+                        },
+                        {
+                            img: 'assets/images/png/obdii.png',
+                            description: 'IOS / Android mobile apps'
+                        },
+                        {
+                            img: 'assets/images/png/app.png',
+                            description: 'IOS / Android mobile apps'
+                        },
+                    ])
+                .banner__actions
+                    button.page-btn.page-btn_violet
+            .banner__img
+                img(src="assets/images/png/device.png", alt="device")
